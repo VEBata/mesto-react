@@ -38,7 +38,9 @@ function Main(props) {
         </div>
         <button 
         type="button" 
-        className="profile__button-plus" />
+        className="profile__button-plus" 
+        onClick={props.onAddPlace}
+        />
       </section>
       <section 
       className="elements">

@@ -38,7 +38,7 @@ const App = () => {
   }, []);
 
   return (
-    <div className="page">
+    <div className="page__content">
       <Header />
       <Main
         onEditAvatar={handleEditAvatarClick}
