@@ -30,23 +30,20 @@ function Main(props) {
         <div className="profile__info">
           <div className="profile__title">
             <h1 className="profile__name">{userName}</h1>
-            <button 
-            className="profile__popup" 
-            onClick={props.onEditProfile} />
+            <button className="profile__popup" onClick={props.onEditProfile} />
           </div>
           <p className="profile__text">{userDescription}</p>
         </div>
-        <button 
-        type="button" 
-        className="profile__button-plus" 
-        onClick={props.onAddPlace}
+        <button
+          type="button"
+          className="profile__button-plus"
+          onClick={props.onAddPlace}
         />
       </section>
-      <section 
-      className="elements">
-      {cards.map((card) => (
-        <Card card={card} key={card._id} onCardClick={props.onCardClick} />
-      ))}        
+      <section className="elements">
+        {cards.map((card) => (
+          <Card card={card} key={card._id} onCardClick={props.onCardClick} />
+        ))}
       </section>
     </main>
   );
