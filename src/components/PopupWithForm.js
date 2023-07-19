@@ -12,7 +12,9 @@ function PopupWithForm(props) {
           className="popup__close"
           onClick={props.onClose}
         />
-        <h3 className="popup__title">{props.title}</h3>
+        <h3 className={`popup__title popup__title_type_${props.name}`}>
+          {props.title}
+        </h3>
         <form
           className="popup__form"
           name={props.form}

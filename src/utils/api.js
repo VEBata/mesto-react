@@ -46,19 +46,11 @@ class Api {
       }),
     }).then(this._checkResponse);
   }
-
-  setLike(cardId) {
+  //лайк-дизлайк
+  toggleLike(cardId, isLiked) {
     return fetch(`${this._url}/cards/${cardId}/likes`, {
-      method: "PUT",
       headers: this._headers,
-    }).then(this._checkResponse);
-  }
-
-  //удаление лайка
-  deleteLike(cardId) {
-    return fetch(`${this._url}/cards/${cardId}/likes`, {
-      method: "DELETE",
-      headers: this._headers,
+      method: isLiked ? "DELETE" : "PUT",
     }).then(this._checkResponse);
   }
 
